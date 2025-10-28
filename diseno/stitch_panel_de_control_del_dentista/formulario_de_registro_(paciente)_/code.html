@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro de Paciente - Clínica Dental</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#138aec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#333333] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-[#333333] dark:text-gray-200">arrow_back</span>
+</div>
+<h2 class="text-[#333333] dark:text-gray-200 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Clínica Dental</h2>
+<div class="flex size-12 shrink-0 items-center"></div>
+</div>
+<main class="flex-1 px-4 py-6">
+<h1 class="text-[#333333] dark:text-gray-100 tracking-tight text-[32px] font-bold leading-tight text-left pb-2">Crear Nueva Cuenta</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal pb-8">Bienvenido. Completa tus datos para crear una cuenta.</p>
+<div class="space-y-4">
+<div class="flex flex-col min-w-40 flex-1">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="nombre">Nombre</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" id="nombre" placeholder="Ingresa tu nombre" value=""/>
+</div>
+<div class="flex flex-col min-w-40 flex-1">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="apellido">Apellido</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" id="apellido" placeholder="Ingresa tu apellido" value=""/>
+</div>
+<div class="flex flex-col min-w-40 flex-1">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="email">Correo Electrónico</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" id="email" placeholder="ejemplo@correo.com" type="email" value=""/>
+<!-- <p class="text-[#D0021B] text-sm pt-1">El correo no es válido</p> -->
+</div>
+<div class="flex flex-col min-w-40 flex-1 relative">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="password">Contraseña</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal pr-12" id="password" placeholder="Crea una contraseña segura" type="password" value=""/>
+<button class="absolute right-3 top-[46px] text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<div class="flex flex-col min-w-40 flex-1 relative">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="confirm_password">Confirmar Contraseña</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal pr-12" id="confirm_password" placeholder="Vuelve a escribir la contraseña" type="password" value=""/>
+<button class="absolute right-3 top-[46px] text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<div class="flex flex-col min-w-40 flex-1">
+<label class="text-[#333333] dark:text-gray-200 text-base font-medium leading-normal pb-2" for="dob">Fecha de Nacimiento</label>
+<div class="relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#333333] dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#F1F1F1] dark:border-gray-700 bg-white dark:bg-background-dark focus:border-primary h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal appearance-none" id="dob" type="date"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none">calendar_today</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="px-4 py-8 mt-4">
+<button class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/30 transition-colors duration-300">
+        Registrarse
+      </button>
+<p class="text-center text-gray-600 dark:text-gray-400 mt-6">
+        ¿Ya tienes una cuenta? <a class="font-bold text-primary hover:underline" href="#">Inicia sesión</a>
+</p>
+</footer>
+</div>
+</body></html>

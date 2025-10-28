@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil de Paciente - Clínica Dental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#138aec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+            "primary-custom": "#0A74DA",
+            "background-custom-light": "#F8F9FA",
+            "background-card-light": "#FFFFFF",
+            "text-primary-light": "#212529",
+            "text-secondary-light": "#495057",
+            "border-light": "#E9ECEF",
+            "background-custom-dark": "#101a22",
+            "background-card-dark": "#182430",
+            "text-primary-dark": "#F8F9FA",
+            "text-secondary-dark": "#adb5bd",
+            "border-dark": "#343a40"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-custom-light dark:bg-background-custom-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden pb-24">
+<div class="sticky top-0 z-10 flex items-center bg-background-custom-light/80 dark:bg-background-custom-dark/80 p-4 pb-2 justify-between backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Alejandro Gómez</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-primary-light dark:text-text-primary-dark text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex p-4 @container bg-background-custom-light dark:bg-background-custom-dark">
+<div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24" data-alt="Foto de perfil del paciente Alejandro Gómez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB84-W8GDgWBf43Ptu07uUYzxHqSSfBmBH_BDTm0x9oHiRL4rX6egs74JkpzS9mvjR0QW8DG4UOgs9mj1Bd5Q2Pgib_0HKM3vglgPxFKwE51Ne79uW_DZ2b_iex6HwpgwWPpGv__m6bfyhIDNK7EkzCOdo5scZIhU42KgYrdcAfDt_n6s81YxqIReR5H05yvLzDc3PsoxYHbX0JUcvs7v-WxduL9cn5jfd3MVMMjIGvUzuZUEQAUVHBHsZ2nYkRLCeJiN-NU6klyWXV");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-[22px] font-bold leading-tight tracking-[-0.015em]">Alejandro Gómez</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-normal leading-normal">42 años, ID: 71234567A</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex px-4 py-3 sticky top-[60px] z-10 bg-background-custom-light/80 dark:bg-background-custom-dark/80 backdrop-blur-sm">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-border-light dark:bg-border-dark p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-primary-custom has-[:checked]:text-white text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Tratamientos</span>
+<input checked="" class="invisible w-0" name="profile-section" type="radio" value="Tratamientos"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-primary-custom has-[:checked]:text-white text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Historial</span>
+<input class="invisible w-0" name="profile-section" type="radio" value="Historial"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-primary-custom has-[:checked]:text-white text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Notas</span>
+<input class="invisible w-0" name="profile-section" type="radio" value="Notas"/>
+</label>
+</div>
+</div>
+<div class="px-4 space-y-6">
+<div class="w-full">
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Próximos</h3>
+<div class="bg-background-card-light dark:bg-background-card-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-3 justify-between hover:bg-border-light/50 dark:hover:bg-border-dark/50 transition-colors duration-200 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-amber-600 dark:text-amber-400 flex items-center justify-center rounded-lg bg-amber-500/10 shrink-0 size-12">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Limpieza Dental</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">Dr. Martínez</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="shrink-0 text-right"><p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">15 Nov, 10:30</p></div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-3 justify-between hover:bg-border-light/50 dark:hover:bg-border-dark/50 transition-colors duration-200 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-amber-600 dark:text-amber-400 flex items-center justify-center rounded-lg bg-amber-500/10 shrink-0 size-12">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Revisión de Ortodoncia</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">Dra. Sánchez</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="shrink-0 text-right"><p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">28 Nov, 16:00</p></div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full">
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-2">Realizados</h3>
+<div class="bg-background-card-light dark:bg-background-card-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-3 justify-between hover:bg-border-light/50 dark:hover:bg-border-dark/50 transition-colors duration-200 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-green-600 dark:text-green-400 flex items-center justify-center rounded-lg bg-green-500/10 shrink-0 size-12">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Extracción Muela del Juicio</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">Dr. Martínez, Pieza 18</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="shrink-0 text-right"><p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">02 Oct, 11:00</p></div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark mx-4"></div>
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-3 justify-between hover:bg-border-light/50 dark:hover:bg-border-dark/50 transition-colors duration-200 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="text-green-600 dark:text-green-400 flex items-center justify-center rounded-lg bg-green-500/10 shrink-0 size-12">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">Empaste Compuesto</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">Dra. Sánchez, Pieza 24</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="shrink-0 text-right"><p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">15 Jul, 09:30</p></div>
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="fixed bottom-24 right-4 z-20 flex cursor-pointer items-center justify-center rounded-full h-14 w-14 bg-primary-custom text-white shadow-lg hover:bg-primary-custom/90 transition-colors duration-200">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<div class="fixed bottom-0 left-0 right-0 z-30 border-t border-border-light dark:border-border-dark bg-background-card-light dark:bg-background-card-dark shadow-[0_-1px_4px_rgba(0,0,0,0.05)]">
+<div class="flex h-16 justify-around items-stretch px-2">
+<a class="flex flex-col items-center justify-center w-full gap-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-custom dark:hover:text-primary-custom transition-colors duration-200 py-2" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full gap-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-custom dark:hover:text-primary-custom transition-colors duration-200 py-2" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-xs font-medium">Citas</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full gap-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-custom dark:hover:text-primary-custom transition-colors duration-200 py-2" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">Mensajes</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full gap-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary-custom dark:hover:text-primary-custom transition-colors duration-200 py-2" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-xs font-medium">Recursos</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full gap-1 text-primary-custom transition-colors duration-200 py-2 relative" href="#">
+<div class="absolute top-1.5 h-1 w-8 rounded-full bg-primary-custom"></div>
+<span class="material-symbols-outlined fill-1">person</span>
+<span class="text-xs font-bold">Perfil</span>
+</a>
+</div>
+</div>
+</div>
+</body></html>

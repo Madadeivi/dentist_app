@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clínica Dental - Acceso</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#007BFF",
+            "background-light": "#FFFFFF",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    #register-form,
+    #login-form-extras {
+        display: none;
+    }
+    input[name="auth-toggle"][value="Registrarse"]:checked ~ #register-form {
+        display: flex;
+    }
+    input[name="auth-toggle"][value="Iniciar Sesión"]:checked ~ #login-form {
+        display: flex;
+    }
+    input[name="auth-toggle"][value="Iniciar Sesión"]:checked ~ #login-form-extras {
+        display: flex;
+    }
+    input[name="auth-toggle"][value="Registrarse"]:checked ~ #main-button button {
+        content: 'Registrarse';
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="flex flex-col items-center justify-start w-full max-w-md mx-auto p-4 pt-12">
+<div class="flex items-center justify-center mb-8">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined !text-3xl">dentistry</span>
+</div>
+</div>
+<h1 class="text-slate-800 dark:text-slate-100 tracking-tight text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6 font-display">Bienvenido/a</h1>
+<div class="w-full">
+<div class="flex px-4 py-3 w-full">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-slate-800 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-slate-50 text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal transition-all duration-200">
+<span class="truncate">Iniciar Sesión</span>
+<input checked="" class="invisible w-0 absolute" name="auth-toggle" type="radio" value="Iniciar Sesión"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-slate-800 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-slate-50 text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal transition-all duration-200">
+<span class="truncate">Registrarse</span>
+<input class="invisible w-0 absolute" name="auth-toggle" type="radio" value="Registrarse"/>
+</label>
+</div>
+</div>
+<div class="w-full flex-col space-y-4 px-4 py-3" id="login-form">
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Correo Electrónico</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-slate-400 dark:text-slate-500 absolute left-0 top-0 flex h-full items-center justify-center pl-4" data-icon="Mail" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-4 text-base font-normal leading-normal" placeholder="tu@email.com" value=""/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Contraseña</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-slate-400 dark:text-slate-500 absolute left-0 top-0 flex h-full items-center justify-center pl-4" data-icon="Lock" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-12 text-base font-normal leading-normal" placeholder="••••••••" type="password" value=""/>
+<button class="text-slate-400 dark:text-slate-500 absolute right-0 top-0 flex h-full cursor-pointer items-center justify-center pr-4" data-icon="Eye" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+</div>
+<div class="w-full flex-col space-y-4 px-4 py-3" id="register-form">
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Nombre Completo</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-slate-400 dark:text-slate-500 absolute left-0 top-0 flex h-full items-center justify-center pl-4">
+<span class="material-symbols-outlined">person</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-4 text-base font-normal leading-normal" placeholder="Tu nombre y apellido" value=""/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Correo Electrónico</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-slate-400 dark:text-slate-500 absolute left-0 top-0 flex h-full items-center justify-center pl-4">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-4 text-base font-normal leading-normal" placeholder="tu@email.com" value=""/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal pb-2">Contraseña</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-slate-400 dark:text-slate-500 absolute left-0 top-0 flex h-full items-center justify-center pl-4">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-slate-500 pl-12 pr-12 text-base font-normal leading-normal" placeholder="Crea una contraseña segura" type="password" value=""/>
+<button class="text-slate-400 dark:text-slate-500 absolute right-0 top-0 flex h-full cursor-pointer items-center justify-center pr-4">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+</div>
+<div class="w-full flex justify-end px-4 pt-1 pb-4" id="login-form-extras">
+<a class="text-primary hover:underline text-sm font-medium" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+<div class="flex w-full flex-col items-center justify-center gap-4 px-4 py-3" id="main-button">
+<button class="flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-primary px-5 text-base font-semibold leading-normal text-white shadow-sm transition-transform duration-200 active:scale-95">
+<span class="login-text">Iniciar Sesión</span>
+<span class="register-text hidden">Registrarse</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggles = document.querySelectorAll('input[name="auth-toggle"]');
+      const loginButtonText = document.querySelector('.login-text');
+      const registerButtonText = document.querySelector('.register-text');
+      function updateButtonText(value) {
+        if (value === 'Registrarse') {
+          loginButtonText.classList.add('hidden');
+          registerButtonText.classList.remove('hidden');
+        } else {
+          loginButtonText.classList.remove('hidden');
+          registerButtonText.classList.add('hidden');
+        }
+      }
+      toggles.forEach(toggle => {
+        toggle.addEventListener('change', function () {
+          updateButtonText(this.value);
+        });
+        if (toggle.checked) {
+          updateButtonText(toggle.value);
+        }
+      });
+    });
+  </script>
+
+</body></html>

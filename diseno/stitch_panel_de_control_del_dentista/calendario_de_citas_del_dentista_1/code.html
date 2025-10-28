@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendario - Clínica Dental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#138aec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden mx-auto max-w-md shadow-lg">
+<header class="flex flex-col bg-background-light dark:bg-background-dark pt-4 sticky top-0 z-10">
+<div class="flex items-center px-4 pb-2 justify-between">
+<button class="flex items-center justify-center h-12 w-12 text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-2xl">chevron_left</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Septiembre 2024</h2>
+<button class="flex items-center justify-center h-12 w-12 text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</button>
+</div>
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-slate-200/60 dark:bg-slate-800/60 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Mes</span>
+<input checked="" class="invisible w-0" name="calendar-view" type="radio" value="Mes"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Semana</span>
+<input class="invisible w-0" name="calendar-view" type="radio" value="Semana"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Día</span>
+<input class="invisible w-0" name="calendar-view" type="radio" value="Día"/>
+</label>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<div class="px-4">
+<div class="grid grid-cols-7 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">L</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">X</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">J</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">V</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold leading-normal tracking-wider flex h-10 w-full items-center justify-center pb-0.5">D</p>
+<div class="h-14 w-full text-slate-400 dark:text-slate-600 col-start-7 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">1</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">2</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">3</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary/40"></div>4</div></div>
+<div class="h-14 w-full text-slate-50 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full bg-primary">5</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">6</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">7</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">8</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary/40"></div>9</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">10</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary"></div>11</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">12</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">13</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">14</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">15</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">16</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary/40"></div>17</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary"></div>18</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">19</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">20</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">21</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">22</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">23</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full relative"><div class="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-primary"></div>24</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">25</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">26</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">27</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">28</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></div>
+<div class="h-14 w-full text-slate-800 dark:text-slate-200 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></div>
+</div>
+</div>
+<div class="mt-4 px-4 space-y-3">
+<h3 class="text-sm font-bold text-slate-900 dark:text-slate-50">Jueves, 5 de Septiembre</h3>
+<div class="bg-primary/20 dark:bg-primary/30 p-4 rounded-lg flex items-center gap-4 border-l-4 border-primary">
+<div class="flex flex-col text-sm text-primary dark:text-primary-300">
+<span>10:00</span>
+<span>11:00</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Carlos Pérez</p>
+<p class="text-sm text-slate-600 dark:text-slate-300">Limpieza dental</p>
+</div>
+<button class="text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="bg-green-500/20 dark:bg-green-500/30 p-4 rounded-lg flex items-center gap-4 border-l-4 border-green-500">
+<div class="flex flex-col text-sm text-green-700 dark:text-green-300">
+<span>12:30</span>
+<span>13:00</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Ana Gómez</p>
+<p class="text-sm text-slate-600 dark:text-slate-300">Revisión Ortodoncia</p>
+</div>
+<button class="text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="bg-amber-500/20 dark:bg-amber-500/30 p-4 rounded-lg flex items-center gap-4 border-l-4 border-amber-500">
+<div class="flex flex-col text-sm text-amber-700 dark:text-amber-300">
+<span>16:00</span>
+<span>16:45</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-100">Laura Martín</p>
+<p class="text-sm text-slate-600 dark:text-slate-300">Empaste (pendiente)</p>
+</div>
+<button class="text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</main>
+<div class="absolute bottom-24 right-5 z-20">
+<button class="flex items-center justify-center w-14 h-14 cursor-pointer overflow-hidden rounded-full bg-primary text-slate-50 shadow-lg hover:bg-primary/90 transition-colors duration-200">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<footer class="absolute bottom-0 left-0 right-0 z-10">
+<div class="flex border-t border-slate-200 dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-2 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+<p class="text-xs font-medium tracking-wide">Panel</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<p class="text-xs font-medium tracking-wide">Pacientes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill text-2xl">calendar_month</span>
+<p class="text-xs font-medium tracking-wide">Calendario</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<p class="text-xs font-medium tracking-wide">Mensajes</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<p class="text-xs font-medium tracking-wide">Ajustes</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

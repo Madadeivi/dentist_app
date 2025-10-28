@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestión de Paciente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0A74DA",
+            "background-light": "#F8F9FA",
+            "background-dark": "#101a22",
+            "text-light": "#212529",
+            "text-dark": "#E9ECEF",
+            "card-light": "#FFFFFF",
+            "card-dark": "#182430",
+            "border-light": "#E9ECEF",
+            "border-dark": "#2a3b4c",
+            "subtle-text-light": "#6c757d",
+            "subtle-text-dark": "#a0aec0",
+            "accent-green": "#28A745",
+            "accent-orange": "#fd7e14"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .material-symbols-outlined.fill-icon {
+        font-variation-settings: 'FILL' 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative mx-auto flex h-screen min-h-screen w-full max-w-md flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-border-light dark:border-border-dark">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar de Alejandro Sanz" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIHyquBAewxwJxKDC3iX_63t4SezQ67L2oQWkZUbl5BGmi0NSNjl0iKSRlMr_yDnZ7dUeYr3arjuQTeIbB0nsNXfhilYUl91iTFnqzgPt3IPkS6oGIQhLXK738RN_RxwtgEr0s9un7fori4C4dXp_8y8wMuIbVCvMqAYB-s1B91ly0OZwx3zycGaVDKcs6hsqm8Jh_LfiW3o6IYaSwxwCgj9uA3ceJRF2tlgbg2ZQ-tWTvFTS9DuCrtFm-ZhHzZ8YaWzXslAW3Ff-D");'></div>
+</div>
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight flex-1 ml-4">Alejandro Sanz</h1>
+<div class="flex w-10 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-black/5 dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal pb-3 pt-1 px-4 bg-background-light dark:bg-background-dark">34 años, ID: 7712389</p>
+<div class="flex px-4 py-3 bg-background-light dark:bg-background-dark sticky top-[71px] z-10">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-black/5 dark:bg-white/5 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-card-light has-[:checked]:dark:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-subtle-text-light dark:text-subtle-text-dark text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Tratamientos</span>
+<input checked="" class="invisible w-0" name="view-toggle" type="radio" value="Tratamientos"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-card-light has-[:checked]:dark:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-primary text-subtle-text-light dark:text-subtle-text-dark text-sm font-medium leading-normal transition-colors duration-200">
+<span class="truncate">Diagnósticos</span>
+<input class="invisible w-0" name="view-toggle" type="radio" value="Diagnósticos"/>
+</label>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto pb-24">
+<div class="flex flex-col p-4 gap-3">
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark px-4 py-2 group shadow-sm" open="">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2">
+<div class="flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Endodoncia Molar 26</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-block h-2 w-2 rounded-full bg-accent-orange"></span>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-xs">En Progreso</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark group-open:rotate-180 transition-transform duration-200">expand_more</span>
+</summary>
+<div class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal pb-2 mt-1 border-t border-border-light dark:border-border-dark pt-3">
+<p><strong>Fecha:</strong> 15/08/2024</p>
+<p><strong>Coste:</strong> $450.00</p>
+<p class="mt-2"><strong>Notas:</strong> El paciente refiere sensibilidad al frío. Se procederá con la primera fase del tratamiento.</p>
+</div>
+</details>
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark px-4 py-2 group shadow-sm">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2">
+<div class="flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Implante Molar 16</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-block h-2 w-2 rounded-full bg-gray-400"></span>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-xs">Planificado</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark group-open:rotate-180 transition-transform duration-200">expand_more</span>
+</summary>
+<div class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal pb-2 mt-1 border-t border-border-light dark:border-border-dark pt-3">
+<p><strong>Fecha:</strong> 01/09/2024</p>
+<p><strong>Coste:</strong> $1200.00</p>
+<p class="mt-2"><strong>Notas:</strong> Pendiente de cirugía para colocación de implante.</p>
+</div>
+</details>
+<details class="flex flex-col rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark px-4 py-2 group shadow-sm">
+<summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-2">
+<div class="flex-1">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Limpieza Dental</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-block h-2 w-2 rounded-full bg-accent-green"></span>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-xs">Completado</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-light dark:text-text-dark group-open:rotate-180 transition-transform duration-200">expand_more</span>
+</summary>
+<div class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal pb-2 mt-1 border-t border-border-light dark:border-border-dark pt-3">
+<p><strong>Fecha:</strong> 02/05/2024</p>
+<p><strong>Coste:</strong> $80.00</p>
+<p class="mt-2"><strong>Notas:</strong> Profilaxis y fluorización realizadas con éxito. Se recomienda revisión en 6 meses.</p>
+</div>
+</details>
+</div>
+</main>
+<div class="absolute bottom-24 right-5">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 w-14 bg-primary text-white shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<nav class="absolute bottom-0 left-0 right-0 z-10 border-t border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+<div class="mx-auto flex h-20 max-w-md items-center justify-around px-2">
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-text-light dark:text-subtle-text-dark hover:text-primary dark:hover:text-primary transition-colors duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+<span class="text-xs font-normal">Panel</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary transition-colors duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-2xl fill-icon">groups</span>
+<span class="text-xs font-medium">Pacientes</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-text-light dark:text-subtle-text-dark hover:text-primary dark:hover:text-primary transition-colors duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-2xl">calendar_today</span>
+<span class="text-xs font-normal">Calendario</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-text-light dark:text-subtle-text-dark hover:text-primary dark:hover:text-primary transition-colors duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="text-xs font-normal">Mensajes</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-subtle-text-light dark:text-subtle-text-dark hover:text-primary dark:hover:text-primary transition-colors duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-xs font-normal">Ajustes</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>
